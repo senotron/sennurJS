@@ -37,6 +37,5 @@ const list = {
     });
 
 const result = input.split('').map(n => list[n] || n).join('')
-
-	return `${result}`;
+return `${result}`;
 };
