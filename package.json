@@ -1,0 +1,14 @@
+{
+	"name": "slon",
+	"version": "0.0.1",
+	"description": "Module that will be useful to you with many features",
+	"main": "shukurzade.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"emoji text",
+	],
+	"author": "Senan Shukurzade",
+	"license": "MIT"
+}
