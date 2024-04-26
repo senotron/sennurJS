@@ -1,6 +1,6 @@
 {
 	"name": "solnjs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Module that will be useful to you with many features",
 	"main": "shukurzade.js",
 	"scripts": {
@@ -8,6 +8,7 @@
 	},
 	"keywords": [
 		"emoji text",
+		"topgg vote"
 	],
 	"author": "Senan Shukurzade",
 	"license": "MIT"
