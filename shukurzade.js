@@ -42,21 +42,10 @@ return `${result}`;
 
 
 
-exports.checkVote = function (token, userID) {
+exports.checkVote = async function (token, userID) {
   if (!token) return;
   const TopGG = require("@top-gg/sdk");
-  const api = new TopGG.Api(token).catch((error) => {
-    throw new TypeError("The Top.GG bot token you entered is incorrect!");
-  });
-  let result;
-  api.hasVoted(userID).then((voted) => {
-    if (voted) {
-      result = true;
-    } else {
-      result = false;
-    }
-  });
-
+  const api = new TopGG.Api(token)
+  let result = await api.hasVoted(userID)
   return `${result}`;
 };
-
