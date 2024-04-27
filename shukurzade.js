@@ -1,3 +1,18 @@
+const axios = require("axios")
+
+function checkForUpdate(){
+try {
+            axios.get('https://registry.npmjs.org/solnjs/latest').then(response => {
+                const data = response.data;
+
+                if (require('./package.json').version !== data.version) {
+                    error(`You are using an old version. You can update the module by typing '${ansi.blueBright(`npm install solnjs@${data.version}`)}'`);
+                };
+            }).catch(() => { });
+        } catch (err) {}
+    
+}
+
 exports.toEmoji = function (input) {
 if(!input) return;
 if(input.length > 50) return;
@@ -38,6 +53,7 @@ const list = {
 
 const result = input.split('').map(n => list[n] || n).join('')
 return `${result}`;
+checkForUpdate();   
 };
 
 
@@ -48,4 +64,5 @@ exports.checkVote = async function (token, userID) {
   const api = new TopGG.Api(token)
   let result = await api.hasVoted(userID)
   return `${result}`;
+  checkForUpdate();
 };
