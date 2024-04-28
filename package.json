@@ -1,6 +1,6 @@
 {
-	"name": "solnjs",
-	"version": "0.1.9",
+	"name": "sennur",
+	"version": "0.0.1",
 	"description": "Module that will be useful to you with many features",
 	"main": "shukurzade.js",
 	"scripts": {
