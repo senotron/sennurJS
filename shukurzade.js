@@ -1,3 +1,5 @@
+const axios = require("axios")
+
 function checkForUpdate(){
 try {
     const response = await axios.get("https://registry.npmjs.org/sennur/latest");
