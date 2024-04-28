@@ -1,6 +1,6 @@
 {
 	"name": "solnjs",
-	"version": "0.1.0",
+	"version": "0.1.9",
 	"description": "Module that will be useful to you with many features",
 	"main": "shukurzade.js",
 	"scripts": {
@@ -14,5 +14,8 @@
 		"vote"
 	],
 	"author": "Senan Shukurzade",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"@top-gg/sdk": "^3.1.6"
+	}
 }
