@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-function checkForUpdate(){
+async function checkForUpdate(){
 try {
     const response = await axios.get("https://registry.npmjs.org/sennur/latest");
     if (require("./package.json").version !== response.data.version) {
@@ -12,7 +12,7 @@ try {
     
 }
 
-exports.toEmoji = function (input) {
+exports.toEmoji = async function (input) {
 if(!input) return;
 if(input.length > 50) return;
 const list = {
