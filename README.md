@@ -26,5 +26,5 @@ console.log(fact) // Fun fact
 ```
 
 # Links
-- [Discord](https://discord.gg/kkg8BmPU59)
+- [Discord](https://discord.gg/nTa2qttkUa)
 - [Youtube](https://www.youtube.com/channel/UCakcpjCJKKAJ-6B-fzjnVyA)
