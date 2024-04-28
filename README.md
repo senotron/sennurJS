@@ -18,6 +18,7 @@ console.log(result) // true or false (True: Voted,False: No vote)
 ```
 
 ## Fun Fact
+Example;
 ```js
 const sennur = require("sennur")
 console.log(sennur.funFact()) // Fun fact
