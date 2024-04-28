@@ -1,13 +1,12 @@
 function checkForUpdate(){
 try {
-            fetch("https://registry.npmjs.org/sennur/latest").then(async(res) => {
-        res.json().then((data) => {
-          if(require("./package.json").version !== data.version) {
-            console.warn("[sennurJS] It seems like you are using an outdated version of sennurJS. Use npm update sennur to update module.")
-          }
-        })
-    })
-        } catch (err) {}
+    const response = await axios.get("https://registry.npmjs.org/sennur/latest");
+    if (require("./package.json").version !== response.data.version) {
+        console.warn("[sennurJS] It seems like you are using an outdated version of sennurJS. Use npm update sennur to update module.");
+    }
+} catch (err) {
+    console.error(err);
+}
     
 }
 
