@@ -68,9 +68,9 @@ exports.checkVote = async function (token, userID) {
 };
 
 exports.funFact = async function () {
-
-
-
+  const facts = require("./facts.json")
+  const randomIndex = Math.floor(Math.random() * facts.length);
+  const result = facts[randomIndex];
   checkForUpdate();
   return `${result}`;
   
