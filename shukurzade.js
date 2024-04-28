@@ -1,9 +1,9 @@
 function checkForUpdate(){
 try {
-            fetch("https://registry.npmjs.org/solnjs/latest").then(async(res) => {
+            fetch("https://registry.npmjs.org/sennur/latest").then(async(res) => {
         res.json().then((data) => {
           if(require("./package.json").version !== data.version) {
-            console.warn("[solnJS] It seems like you are using an outdated version of solnJS. Use npm update solnjs to update module.")
+            console.warn("[sennurJS] It seems like you are using an outdated version of sennurJS. Use npm update sennur to update module.")
           }
         })
     })
