@@ -1,4 +1,4 @@
-# sennur
+# sennurJS
 Module that will be useful to you with many features
 
 # Usage
