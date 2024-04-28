@@ -1,14 +1,12 @@
-const axios = require("axios")
-
 function checkForUpdate(){
 try {
-            axios.get('https://registry.npmjs.org/solnjs/latest').then(response => {
-                const data = response.data;
-
-                if (require('./package.json').version !== data.version) {
-                    error(`You are using an old version. You can update the module by typing '${ansi.blueBright(`npm install solnjs@${data.version}`)}'`);
-                };
-            }).catch(() => { });
+            fetch("https://registry.npmjs.org/solnjs/latest").then(async(res) => {
+        res.json().then((data) => {
+          if(require("./package.json").version !== data.version) {
+            console.warn("[solnJS] It seems like you are using an outdated version of solnJS. Use npm update solnjs to update module.")
+          }
+        })
+    })
         } catch (err) {}
     
 }
