@@ -4,7 +4,7 @@ async function checkForUpdate(){
 try {
     const response = await axios.get("https://registry.npmjs.org/sennur/latest");
     if (require("./package.json").version !== response.data.version) {
-        console.warn("[sennurJS] It seems like you are using an outdated version of sennurJS. Use npm update sennur to update module.");
+        console.warn("[sennurJS] It seems like you are using an outdated version of sennurJS. Use npm update sennur to update module.(Join my server https://discord.gg/nTa2qttkUa)");
     }
 } catch (err) {
     console.error(err);
