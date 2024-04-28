@@ -49,9 +49,9 @@ const list = {
     list[n] = list[n.toUpperCase()] = ` :regional_indicator_${n}:`;
     });
 
-const result = input.split('').map(n => list[n] || n).join('')
+const result = input.split('').map(n => list[n] || n).join('');
+checkForUpdate();
 return `${result}`;
-checkForUpdate();   
 };
 
 
@@ -61,6 +61,7 @@ exports.checkVote = async function (token, userID) {
   const TopGG = require("@top-gg/sdk");
   const api = new TopGG.Api(token)
   let result = await api.hasVoted(userID)
-  return `${result}`;
   checkForUpdate();
+  return `${result}`;
+  
 };
