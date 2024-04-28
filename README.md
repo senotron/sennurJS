@@ -13,6 +13,6 @@ console.log(text)
 Example;
 ``` js
 const sennur = require("sennur")
-const result = sennur.checkVote(`TopGG Bot Token`,`User id`)
+const result = await sennur.checkVote(`TopGG Bot Token`,`User id`)
 console.log(result) // true or false (True: Voted,False: No vote)
 ``` 
