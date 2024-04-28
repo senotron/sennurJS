@@ -66,3 +66,12 @@ exports.checkVote = async function (token, userID) {
   return `${result}`;
   
 };
+
+exports.funFact = async function () {
+
+
+
+  checkForUpdate();
+  return `${result}`;
+  
+};
