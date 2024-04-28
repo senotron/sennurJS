@@ -16,7 +16,6 @@
 	"author": "Senan Shukurzade",
 	"license": "MIT",
 	"dependencies": {
-		"@top-gg/sdk": "^3.1.6",
-		"axios":"^1.6.8"
+		"@top-gg/sdk": "^3.1.6"
 	}
 }
