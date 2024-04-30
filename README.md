@@ -4,6 +4,7 @@ Module that will be useful to you with many features
 # Usage
 ## Emoji Text (For Discord Bot)
 - Converts the text you type into emojis
+
 Example code;
 ``` js
 const sennur = require("sennur")
