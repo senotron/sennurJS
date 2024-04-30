@@ -13,6 +13,7 @@ console.log(text)
 ``` 
 ## Top.GG Check Vote (For Discord Bot)
 - If your bot is on the Top.GG site, you will be able to easily find out whether any users have voted for your bot!
+
 Example code;
 ``` js
 const sennur = require("sennur")
@@ -22,6 +23,7 @@ console.log(result) // true or false (True: Voted,False: No vote)
 
 ## Fun Fact
 - Gives random fun fact
+
 Example code;
 ```js
 const sennur = require("sennur")
@@ -32,6 +34,7 @@ console.log(fact) // Fun fact
 ## Leap Year (29 February)
 - Indicates whether the entered year is a leap year or not.
 - If your site/bot has a birthday system, I recommend using this module!
+
 Example code;
 ``` js
 const sennur = require("sennur")
