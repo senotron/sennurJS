@@ -75,3 +75,10 @@ exports.funFact = async function () {
   return `${result}`;
   
 };
+
+exports.isLeapYear = async function (year) {
+  if (!year || isNaN(year)) return console.warn("[sennur] Please enter a valid year as a number.");
+  checkForUpdate();
+  const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  return isLeapYear ? true : false;
+};
