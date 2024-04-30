@@ -41,7 +41,7 @@ const sennur = require("sennur")
 const result1 = await sennur.isLeapYear("2024")
 const result2 = await sennur.isLeapYear("2023")
 console.log(result1) // true
-console.log(result1) // false
+console.log(result2) // false
 ```
 # Links
 - [Discord](https://discord.gg/nTa2qttkUa)
