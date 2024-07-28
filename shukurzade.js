@@ -57,14 +57,43 @@ return `${result}`;
 
 
 
-exports.checkVote = async function (token, userID) {
-  if (!token) return;
+exports.checkVote = async function ({platform, userId, botId, apiKey}) {
+  if (!platform) return console.warn("[sennur] Please specify a platform: top.gg or discord.place\n(Join my server https://discord.gg/nTa2qttkUa)");
+  if (!userId) return console.warn("[sennur] Please enter user id!\n(Join my server https://discord.gg/nTa2qttkUa)");
+  if (!botId) return console.warn("[sennur] Please enter bot id!\n(Join my server https://discord.gg/nTa2qttkUa)");
+  if (!apiKey) return console.warn("[sennur] Please enter api key!\n(Join my server https://discord.gg/nTa2qttkUa)");
+  const validPlatforms = ['discord.place', 'top.gg'];
+    if (!validPlatforms.includes(platform)) {
+        console.warn('[sennur] Invalid platform. Valid platforms: top.gg or discord.place\n(Join my server https://discord.gg/nTa2qttkUa)');
+        return;
+    }
+
+  if (platform === 'top.gg'){
   const TopGG = require("@top-gg/sdk");
-  const api = new TopGG.Api(token)
+  const api = new TopGG.Api(apiKey)
   let result = await api.hasVoted(userID)
   checkForUpdate();
-  return `${result}`;
-  
+  return result;
+  } else if (platform === 'discord.place'){
+    let resultt;
+    axios.get(`https://api.discord.place/bots/${botId}/voters/${userId}`, {
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': apiKey
+  }
+})
+.then(response => {
+  if (response.status === 204) {
+      resultt = true
+  } else if (response.status === 403) {
+      resultt = false
+  } else {
+    console.warn(`[sennur] An unexpected response status: ${response.status}`);
+  }
+})
+      return resultt;
+  }
+    
 };
 
 exports.funFact = async function () {
