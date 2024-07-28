@@ -11,13 +11,32 @@ const sennur = require("sennur")
 const text = await sennur.toEmoji("Test")
 console.log(text)
 ``` 
-## Top.GG Check Vote (For Discord Bot)
+## Check Vote (For Discord Bot)
+# Top.GG
 - If your bot is on the Top.GG site, you will be able to easily find out whether any users have voted for your bot!
 
 Example code;
 ``` js
 const sennur = require("sennur")
-const result = await sennur.checkVote(`TopGG Bot Token`,`User id`)
+const result = await sennur.checkVote({
+    platform:'top.gg',
+    apiKey:`TopGG Bot Token`,
+    userId:`User id`
+});
+console.log(result) // true or false (True: Voted,False: No vote)
+```
+# discord.place
+- If your bot is on the discord.place site, you will be able to easily find out whether any users have voted for your bot!
+
+Example code;
+``` js
+const sennur = require("sennur")
+const result = await sennur.checkVote({
+    platform:'discord.place',
+    apiKey:`discord.place api key`,
+    botId: 'Bot id',
+    userId:'User id'
+});
 console.log(result) // true or false (True: Voted,False: No vote)
 ```
 
