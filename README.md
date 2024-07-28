@@ -21,6 +21,7 @@ const sennur = require("sennur")
 const result = await sennur.checkVote({
     platform:'top.gg',
     apiKey:`TopGG Bot Token`,
+    botId: 'Bot id',
     userId:`User id`
 });
 console.log(result) // true or false (True: Voted,False: No vote)
