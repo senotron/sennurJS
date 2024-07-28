@@ -1,6 +1,6 @@
 {
 	"name": "sennur",
-	"version": "0.0.1",
+	"version": "1.0.2",
 	"description": "Module that will be useful to you with many features",
 	"main": "shukurzade.js",
 	"scripts": {
@@ -15,7 +15,13 @@
 		"facts",
 		"fun fact",
 		"fact",
-		"sennur"
+		"sennur",
+		"discord.place",
+		"discord",
+		"botlist",
+		"check vote",
+		"discord place"
+		
 	],
 	"author": "Senan Shukurzade",
 	"license": "MIT",
