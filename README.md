@@ -1,5 +1,6 @@
 # ✨️ New update! V1.0.2
-Updated:Check Vote\n
+Updated:Check Vote
+
 You can understand the details by reading below!
 
 # Usage
