@@ -1,5 +1,6 @@
-# sennurJS
-Module that will be useful to you with many features
+# ✨️ New update! V1.0.2
+Updated:Check Vote
+You can understand the details by reading below!
 
 # Usage
 ## Emoji Text (For Discord Bot)
