@@ -71,29 +71,31 @@ exports.checkVote = async function ({platform, userId, botId, apiKey}) {
   if (platform === 'top.gg'){
   const TopGG = require("@top-gg/sdk");
   const api = new TopGG.Api(apiKey)
-  let result = await api.hasVoted(userID)
+  const result = await api.hasVoted(userID)
   checkForUpdate();
   return result;
-  } else if (platform === 'discord.place'){
-    let resultt;
-    axios.get(`https://api.discord.place/bots/${botId}/voters/${userId}`, {
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': apiKey
+  } else if (platform === 'discord.place') {
+    try {
+      const response = await axios.get(`https://api.discord.place/bots/${botId}/voters/${userId}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': apiKey
+        }
+      });
+
+      if (response.status === 204) {
+        return true;
+      } else if (response.status === 403) {
+        return false;
+      } else {
+        console.warn(`[sennur] An unexpected response status: ${response.status}`);
+        return false;
+      }
+    } catch (error) {
+      console.warn(`[sennur] Error: ${error.message}`);
+      
+    }
   }
-})
-.then(response => {
-  if (response.status === 204) {
-      resultt = true
-  } else if (response.status === 403) {
-      resultt = false
-  } else {
-    console.warn(`[sennur] An unexpected response status: ${response.status}`);
-  }
-})
-      return resultt;
-  }
-    
 };
 
 exports.funFact = async function () {
