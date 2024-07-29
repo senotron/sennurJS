@@ -1,7 +1,7 @@
-# ✨️ New update! V1.0.2
-Updated:Check Vote
-
-You can understand the details by reading below!
+# ✨️ New update! V1.1.1
+What's new?
+* A new platform has been added for the checkVote function. You can now see whether users voted for your bots, which are also on the discord.place platform!
+Detailed: [Here](https://github.com/sshukurzade/sennurJS/edit/main/README.md#check-vote-for-discord-bot)
 
 # Usage
 ## Emoji Text (For Discord Bot)
